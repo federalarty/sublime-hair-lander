@@ -140,5 +140,14 @@ footer {
   color: #e91e63;
   border: none;
   border-radius: 5px;
+
+  @media (max-width: 500px) {
+  .popup {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+  }
+}
   cursor: pointer;
 }
