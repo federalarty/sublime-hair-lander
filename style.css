@@ -1,0 +1,95 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fffefc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom right, #ffe0ec, #ffeef5);
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-text h1 {
+    font-size: 28px;
+    margin-top: 20px;
+    color: #c2185b;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.cta {
+    background: #e91e63;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background: #ad1457;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.benefits h2, .depoimentos h2 {
+    text-align: center;
+    color: #c2185b;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+ul li {
+    padding: 10px 0;
+}
+
+.depoimento {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.depoimento img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+    background: #fce4ec;
+    margin-top: 40px;
+}
