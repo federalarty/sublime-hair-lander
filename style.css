@@ -110,5 +110,12 @@ footer {
   font-size: 14px;
   color: #777;
   background: #fce4ec;
+
+  .review-author {
+  font-weight: bold;
+  color: #444;
+  margin-top: 5px;
+}
+
   margin-top: 40px;
 }
