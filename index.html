@@ -114,23 +114,29 @@
   <!-- ✅ Pop-up chamativo -->
   <div class="popup" id="popup">
     <p>🎉 Promoção exclusiva: Frete grátis + brinde para as primeiras clientes de hoje!</p>
-    <button onclick="fecharPopup()">Fechar</button>
+    <a href="https://sublimehaircaps.com.br/braip/" target="_blank">
+      <button>Aproveitar agora</button>
+    </a>
+    <button onclick="fecharPopup()" style="margin-left: 10px;">Fechar</button>
   </div>
 
   <script>
-    setTimeout(function () {
-      var popup = document.getElementById("popup");
+    function mostrarPopup() {
+      const popup = document.getElementById('popup');
       if (popup) {
-        popup.style.display = "block";
-      }
-    }, 5000);
-
-    function fecharPopup() {
-      var popup = document.getElementById("popup");
-      if (popup) {
-        popup.style.display = "none";
+        popup.style.display = 'block';
       }
     }
+
+    function fecharPopup() {
+      const popup = document.getElementById('popup');
+      if (popup) {
+        popup.style.display = 'none';
+      }
+    }
+
+    // Exibe o pop-up após 7 segundos
+    setTimeout(mostrarPopup, 7000);
   </script>
 
 </body>
