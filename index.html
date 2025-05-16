@@ -6,12 +6,11 @@
   <title>Sublime Hair Caps</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel Code (client-side) -->
   <script>
     !function(f,b,e,v,n,t,s){
       if(f.fbq)return;n=f.fbq=function(){
-        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
-      };
+        n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
       n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];
@@ -25,6 +24,27 @@
          src="https://www.facebook.com/tr?id=1691054425106510&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
+
+  <!-- Conversions API via Stape (server-side) -->
+  <script>
+    fetch("https://capig.stape.pm", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event_name: "PageView",
+        event_time: Math.floor(Date.now() / 1000),
+        event_source_url: window.location.href,
+        action_source: "website",
+        user_data: {
+          client_user_agent: navigator.userAgent,
+          client_ip_address: "" // server preenche automaticamente
+        },
+        custom_data: {},
+        event_id: "landing-load",
+        test_event_code: "" // pode deixar em branco
+      })
+    });
+  </script>
 </head>
 <body>
 
@@ -85,7 +105,7 @@
     Página criada por afiliado autorizado | Produto 100% natural e aprovado
   </footer>
 
-  <!-- Evento personalizado para clique no botão -->
+  <!-- Evento personalizado Lead (client-side) -->
   <script>
     document.getElementById('botao-lead').addEventListener('click', function() {
       fbq('track', 'Lead');
