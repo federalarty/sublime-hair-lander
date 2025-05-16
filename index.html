@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sublime Hair Caps</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Meta Pixel Code (client-side) -->
+  <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s){
       if(f.fbq)return;n=f.fbq=function(){
@@ -23,9 +23,8 @@
     <img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=1691054425106510&ev=PageView&noscript=1"/>
   </noscript>
-  <!-- End Meta Pixel Code -->
 
-  <!-- Conversions API via Stape (server-side) -->
+  <!-- Conversions API via Stape -->
   <script>
     fetch("https://capig.stape.pm", {
       method: "POST",
@@ -37,11 +36,11 @@
         action_source: "website",
         user_data: {
           client_user_agent: navigator.userAgent,
-          client_ip_address: "" // server preenche automaticamente
+          client_ip_address: ""
         },
         custom_data: {},
         event_id: "landing-load",
-        test_event_code: "" // pode deixar em branco
+        test_event_code: ""
       })
     });
   </script>
@@ -49,7 +48,7 @@
 <body>
 
   <header class="hero">
-    <img src="https://i.imgur.com/l9kXN6i.png" alt="Mulher com cabelo bonito" class="hero-img">
+    <img src="https://i.imgur.com/l9kXN6i.png" alt="Mulher com cabelo bonito" class="hero-img" />
     <div class="hero-text">
       <h1>Recupere sua autoestima após a gravidez</h1>
       <p>O suplemento capilar natural que está transformando a vida de centenas de mamães!</p>
@@ -65,9 +64,9 @@
         <div class="review-stars">★★★★★</div>
         <span class="review-date">03 Maio. 2025</span>
       </div>
-      <img class="review-img" src="https://i.imgur.com/CfUzYit.png" alt="Produto avaliado">
+      <img class="review-img" src="https://i.imgur.com/CfUzYit.png" alt="Produto avaliado" />
       <p class="review-text">Estou amando 😊.</p>
-      <p class="review-author">— Aline P. </p>
+      <p class="review-author">— Aline P.</p>
     </div>
 
     <div class="review">
@@ -75,9 +74,9 @@
         <div class="review-stars">★★★★★</div>
         <span class="review-date">24 abr. 2025</span>
       </div>
-      <img class="review-img" src="https://i.imgur.com/ePclhZI.png" alt="Produto avaliado">
+      <img class="review-img" src="https://i.imgur.com/ePclhZI.png" alt="Produto avaliado" />
       <p class="review-text">Super indico, muito bom. Fortaleceu minhas unhas e cabelo.</p>
-      <p class="review-author">— Bruna L. </p>
+      <p class="review-author">— Bruna L.</p>
     </div>
 
     <div class="review">
@@ -85,9 +84,9 @@
         <div class="review-stars">★★★★★</div>
         <span class="review-date">25 Jan. 2025</span>
       </div>
-      <img class="review-img" src="https://i.imgur.com/WYibhrz.png" alt="Produto avaliado">
+      <img class="review-img" src="https://i.imgur.com/WYibhrz.png" alt="Produto avaliado" />
       <p class="review-text">Usei por 2 meses e já vi diferença. Produto excelente!</p>
-      <p class="review-author">— Bianca Y. </p>
+      <p class="review-author">— Bianca Y.</p>
     </div>
 
     <div class="review">
@@ -95,9 +94,9 @@
         <div class="review-stars">★★★★★</div>
         <span class="review-date">19 out. 2024</span>
       </div>
-      <img class="review-img" src="https://i.imgur.com/ckOWwGM.png" alt="Produto avaliado">
+      <img class="review-img" src="https://i.imgur.com/ckOWwGM.png" alt="Produto avaliado" />
       <p class="review-text">Produto de fato trouxe resultado. Recomendo demais!</p>
-      <p class="review-author">— Paula G. </p>
+      <p class="review-author">— Paula G.</p>
     </div>
   </section>
 
@@ -105,11 +104,33 @@
     Página criada por afiliado autorizado | Produto 100% natural e aprovado
   </footer>
 
-  <!-- Evento personalizado Lead (client-side) -->
+  <!-- Evento personalizado Lead -->
   <script>
-    document.getElementById('botao-lead').addEventListener('click', function() {
+    document.getElementById('botao-lead').addEventListener('click', function () {
       fbq('track', 'Lead');
     });
+  </script>
+
+  <!-- ✅ Pop-up chamativo -->
+  <div class="popup" id="popup">
+    <p>🎉 Promoção exclusiva: Frete grátis + brinde para as primeiras clientes de hoje!</p>
+    <button onclick="fecharPopup()">Fechar</button>
+  </div>
+
+  <script>
+    setTimeout(function () {
+      var popup = document.getElementById("popup");
+      if (popup) {
+        popup.style.display = "block";
+      }
+    }, 5000);
+
+    function fecharPopup() {
+      var popup = document.getElementById("popup");
+      if (popup) {
+        popup.style.display = "none";
+      }
+    }
   </script>
 
 </body>
