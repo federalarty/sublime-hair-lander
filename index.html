@@ -23,27 +23,6 @@
     <img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=1691054425106510&ev=PageView&noscript=1"/>
   </noscript>
-
-  <!-- Conversions API via Stape -->
-  <script>
-    fetch("https://capig.stape.pm", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        event_name: "PageView",
-        event_time: Math.floor(Date.now() / 1000),
-        event_source_url: window.location.href,
-        action_source: "website",
-        user_data: {
-          client_user_agent: navigator.userAgent,
-          client_ip_address: ""
-        },
-        custom_data: {},
-        event_id: "landing-load",
-        test_event_code: ""
-      })
-    });
-  </script>
 </head>
 <body>
 
@@ -104,61 +83,11 @@
     Página criada por afiliado autorizado | Produto 100% natural e aprovado
   </footer>
 
-  <!-- Evento personalizado Lead -->
   <script>
     document.getElementById('botao-lead').addEventListener('click', function () {
       fbq('track', 'Lead');
+      fetch('https://api.countapi.xyz/hit/revitalle-botao/contador');
     });
-  </script>
-
-  <!-- ✅ Pop-up com cronômetro -->
-  <div class="popup" id="popup">
-    <p>🎉 Promoção exclusiva: Brinde para as primeiras clientes de hoje!</p>
-    <p class="timer">⏳ Oferta expira em: <span id="countdown">05:00</span></p>
-    <a href="https://ev.braip.com/ref?pv=pro3y1m7&af=afixjd0qom" target="_blank">
-      <button>Aproveitar agora</button>
-    </a>
-    <button onclick="fecharPopup()" style="margin-left: 10px;">Fechar</button>
-  </div>
-
-  <script>
-    function iniciarContagem(segundos) {
-      const countdownEl = document.getElementById("countdown");
-      let tempo = segundos;
-
-      const intervalo = setInterval(() => {
-        const minutos = Math.floor(tempo / 60);
-        const segundosRestantes = tempo % 60;
-
-        countdownEl.textContent =
-          (minutos < 10 ? "0" : "") + minutos + ":" +
-          (segundosRestantes < 10 ? "0" : "") + segundosRestantes;
-
-        tempo--;
-
-        if (tempo < 0) {
-          clearInterval(intervalo);
-          countdownEl.textContent = "Expirado!";
-        }
-      }, 1000);
-    }
-
-    function mostrarPopup() {
-      const popup = document.getElementById("popup");
-      if (popup) {
-        popup.style.display = "block";
-        iniciarContagem(3 * 60); // 3 minutos
-      }
-    }
-
-    function fecharPopup() {
-      const popup = document.getElementById("popup");
-      if (popup) {
-        popup.style.display = "none";
-      }
-    }
-
-    setTimeout(mostrarPopup, 7000); // Aparece após 7 segundos
   </script>
 
 </body>
